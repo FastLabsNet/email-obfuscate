@@ -1,0 +1,18 @@
+name: "Email Obfuscate"
+description: "Obfuscate emails in repo at build time"
+
+inputs:
+  include:
+    default: "**/*.{html,js,jsx,ts,tsx}"
+  exclude:
+    default: "node_modules/**,.git/**"
+  allow:
+    required: false
+  config:
+    required: false
+  dry_run:
+    default: "false"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
